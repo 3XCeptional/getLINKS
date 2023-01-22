@@ -38,7 +38,7 @@ To search for 5 links per query from a file called "questions.txt" and download 
 
 Copy code
 ```
-getLINKS.py -f questions.txt -n 5 -p -b
+getLINKS.py -f questions.txt -n 5 -p -b sample_book
 ```
 
 ### Requirements
