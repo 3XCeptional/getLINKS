@@ -8,6 +8,10 @@ import pdfkit
 from PyPDF2 import PdfMerger, PdfFileReader, PdfFileWriter
 import random
 
+##A Python3 tool to search links for different articles by providing a file with queries.
+## The tool returns a list of links based on the number of links specified by the user. 
+##                          -3XCeptional
+
 parser = argparse.ArgumentParser(
     description="Get all The Ans of Your Questions")
 parser.add_argument("-f", "--file", type=str, metavar="",
