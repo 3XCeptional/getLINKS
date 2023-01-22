@@ -26,19 +26,19 @@ To search for 5 links per query from a file called "questions.txt" and save the 
 
 Copy code
 ```
-python3 getLINKS.py -f questions.txt -n 5 -o output.txt
+getLINKS.py -f questions.txt -n 5 -o output.txt
 ```
 To search for 5 links per query from a file called "questions.txt" and save the output in pdf format:
 
 ```
-python3 getLINKS.py -f questions.txt -n 5 -p
+getLINKS.py -f questions.txt -n 5 -p
 ```
 
 To search for 5 links per query from a file called "questions.txt" and download the pages to generate a book:
 
 Copy code
 ```
-python3 getLINKS.py -f questions.txt -n 5 -b
+getLINKS.py -f questions.txt -n 5 -p -b
 ```
 
 ### Requirements
