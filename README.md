@@ -35,6 +35,7 @@ getLINKS.py -f questions.txt -n 5 -p
 ```
 
 To search for 5 links per query from a file called "questions.txt" and download the pages to generate a book:
+**Note**: To generater A book it would Require time and also Depends on the websites to scarp data so limit your no to just 2 or 3 
 
 Copy code
 ```
