@@ -43,21 +43,29 @@ def getQuery(file):
 
 
 def writeQuery(queries, outputfile):
-    with open(outputfile, 'w') as f:
-        f.write(f"# {args.file}\n")
-        for count, query in enumerate(queries):
-            ## Random Pause 
-            randPause = random.randint(0, 3)
-            title = f"\n## {count + 1}) {query}\n"
-            print("Getting Links for :", title ,"\nPaused For",str(randPause)," seconds")
-            f.write(title)
-            urls = search(query, tld="co.in", num=10,
-                          stop=args.number, pause=randPause) # You Can Change pause 
-            res = []
-            [res.append(x) for x in urls if x not in res]  
-            for url in res:
-                links = f" - {url}\n"
-                f.write(links)
+     if args.number > 10:
+        print("Please enter a number less than 10")
+        exit()
+     elif args.number < 0 :
+        print("Please enter a Positive Number")
+        exit()
+   
+     else:
+        with open(outputfile, 'w') as f:
+            f.write(f"# {args.file}\n")
+            for count, query in enumerate(queries):
+                ## Random Pause 
+                randPause = random.randint(0, 3)
+                title = f"\n## {count + 1}) {query}\n"
+                print("Getting Links for :", title ,"\nPaused For",str(randPause)," seconds")
+                f.write(title)
+                urls = search(query, tld="co.in", num=10,
+                              stop=args.number, pause=randPause) # You Can Change pause 
+                res = []
+                [res.append(x) for x in urls if x not in res]  
+                for url in res:
+                    links = f" - {url}\n"
+                    f.write(links)
 
 
 def convertToPDF(filename):
